@@ -1,0 +1,160 @@
+{
+  "dag_id": "sc0000003",
+  "nodes": [
+    {
+      "id": "l1_n0",
+      "wcet": 43.487754518235825,
+      "priority": 9997,
+      "predecessors": [
+        "src"
+      ]
+    },
+    {
+      "id": "l1_n1",
+      "wcet": 306.3342079493252,
+      "priority": 9999,
+      "predecessors": [
+        "src"
+      ]
+    },
+    {
+      "id": "l1_n2",
+      "wcet": 26.874006915013666,
+      "priority": 9994,
+      "predecessors": [
+        "src"
+      ]
+    },
+    {
+      "id": "l1_n3",
+      "wcet": 45.710744816923906,
+      "priority": 9998,
+      "predecessors": [
+        "src"
+      ]
+    },
+    {
+      "id": "l2_n0",
+      "wcet": 149.04051225490397,
+      "priority": 9993,
+      "predecessors": [
+        "l1_n0",
+        "l1_n2",
+        "l1_n3"
+      ]
+    },
+    {
+      "id": "l2_n1",
+      "wcet": 36.90255256565017,
+      "priority": 9996,
+      "predecessors": [
+        "src"
+      ]
+    },
+    {
+      "id": "l2_n2",
+      "wcet": 36.36988867368773,
+      "priority": 9995,
+      "predecessors": [
+        "src"
+      ]
+    },
+    {
+      "id": "l2_n3",
+      "wcet": 20.456148112628366,
+      "priority": 9992,
+      "predecessors": [
+        "l1_n0",
+        "l1_n1"
+      ]
+    },
+    {
+      "id": "sink",
+      "wcet": 44.21695596236809,
+      "priority": 9991,
+      "predecessors": [
+        "l2_n0",
+        "l2_n1",
+        "l2_n2",
+        "l2_n3"
+      ]
+    },
+    {
+      "id": "src",
+      "wcet": 46.10722823126301,
+      "priority": 10000,
+      "predecessors": []
+    }
+  ],
+  "edges": [
+    {
+      "u": "l1_n0",
+      "v": "l2_n0"
+    },
+    {
+      "u": "l1_n0",
+      "v": "l2_n3"
+    },
+    {
+      "u": "l1_n1",
+      "v": "l2_n3"
+    },
+    {
+      "u": "l1_n2",
+      "v": "l2_n0"
+    },
+    {
+      "u": "l1_n3",
+      "v": "l2_n0"
+    },
+    {
+      "u": "l2_n0",
+      "v": "sink"
+    },
+    {
+      "u": "l2_n1",
+      "v": "sink"
+    },
+    {
+      "u": "l2_n2",
+      "v": "sink"
+    },
+    {
+      "u": "l2_n3",
+      "v": "sink"
+    },
+    {
+      "u": "src",
+      "v": "l1_n0"
+    },
+    {
+      "u": "src",
+      "v": "l1_n1"
+    },
+    {
+      "u": "src",
+      "v": "l1_n2"
+    },
+    {
+      "u": "src",
+      "v": "l1_n3"
+    },
+    {
+      "u": "src",
+      "v": "l2_n1"
+    },
+    {
+      "u": "src",
+      "v": "l2_n2"
+    }
+  ],
+  "meta": {
+    "length": 4,
+    "parallelism": 4,
+    "num_cores": 2,
+    "period_ms": 1511,
+    "utilization": 0.5,
+    "total_budget_ms": 755.5,
+    "generator_seed": 9
+  }
+}
